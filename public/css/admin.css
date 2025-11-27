@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hidden by default (moved off-screen) */
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: -550px; /* hide outside */
+    width: 450px;
+    height: 96%;
+    background: #ffffff;
+    box-shadow: -2px 0px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: 0.3s ease;
+    z-index: 999;
+    border-radius: 20px;
+}
+
+/* When active, slide into view */
+.side-panel.open {
+    right: 0;
+}
+
+.close-btn {
+    background: #F2F2F2;
+    color: #A6A6A6;
+    border: none;
+    padding: 6px 6px;
+    cursor: pointer;
+    float: right;
+    border-radius: 20px;
+}
+
+.create-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+    padding: 10px 16px;
+    background-color: #1E3E62;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.create-btn .icon {
+    fill: white; /* make sure the icon is visible */
+}
+
+.createFormTitle{
+    color: #1E3E62;
+    gap: 8px;
+    display: flex;               /* use flex to allow centering */
+    justify-content: center;     /* center horizontally */
+    align-items: center; 
+    font-size: 20px;
+    align-self: center;
+    margin: 10px 5px 10px 5px;
+}
+
+.createFormTitle .icon{
+    fill: #1E3E62;
+}
+
+.createFormTitle .material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 650,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+/* Form container */
+#eventForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* space between fields */
+    padding: 10px 5px;
+}
+
+/* Labels */
+#eventForm label {
+    font-weight: 500;
+    color: #1E3E62;
+    margin-bottom: 4px;
+}
+
+/* Inputs and textarea */
+#eventForm input,
+#eventForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect for inputs */
+#eventForm input:focus,
+#eventForm textarea:focus {
+    border-color: #1E3E62;
+    box-shadow: 0 0 5px rgba(30, 62, 98, 0.3);
+}
+
+/* Textarea specific */
+#eventForm textarea {
+    resize: vertical;  /* allow vertical resize only */
+    min-height: 80px;
+}
+
+/* Submit button */
+#eventForm button {
+    padding: 10px;
+    background-color: #1E3E62;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover */
+#eventForm button:hover {
+    background-color: #1E3E62; /* accent color on hover */
+}
+
+/* Optional: responsive adjustments for mobile */
+@media (max-width: 400px) {
+    #eventForm input,
+    #eventForm textarea,
+    #eventForm button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+

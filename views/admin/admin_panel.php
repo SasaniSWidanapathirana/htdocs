@@ -1,0 +1,107 @@
+<?php 
+// Load DB + Model
+require_once '../../config/db.php';
+require_once '../../models/event.php';
+
+// DB Connection
+$database = new Database();
+$db = $database->connect();
+
+// Load events
+$eventObj = new Event($db);
+$events = $eventObj->getAllEvents();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./addEvent.js"></script>
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_2" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <title>Admin Panel</title>
+</head>
+
+<body class="body">
+
+    <div>
+        <a href="../../index.php">
+            <img src="../../public/images/logo.jpg" alt="logo image">    
+        </a>
+        <button onclick="location.href='../../index.php'">Log out</button>
+    </div>
+
+    <h1 class="h1_center">Admin Panel</h1>
+
+    <!-- Correct include path for menu -->
+    <?php include '../components/admin_menu.php'; ?>
+
+    <h2 class="h2_center">Current Events</h2>
+
+
+
+    
+    <!-- <button onclick="location.href='add_event.html'">add new event</button> -->
+    <div class="div">
+        <button id="openPanelBtn" class="create-btn"><span class="material-symbols-rounded">add_2</span>Create Event</button>
+
+        <div id="sidePanel" class="side-panel">
+            <button id="closePanelBtn" class="close-btn"><span class="material-symbols-rounded">close</span></button>
+
+            <h3 class="createFormTitle"><span class="material-symbols-rounded">add_2</span>Create Event</h3>
+
+            <form id="eventForm" method="POST" action="add_event.php">
+                <label>Name</label>
+                <input type="text" name="eventName" required><br>
+
+                <label>Date</label>
+                <input type="date" name="eventDate" required><br>
+
+                <label>Time</label>
+                <input type="time" name="eventTime" required><br>
+
+                <label>Location</label>
+                <input type="text" name="location" required><br>
+
+                <label>Participant Count</label>
+                <input type="number" name="count" min="1" required><br>
+
+                <label>Description</label>
+                <textarea name="eventDescription"></textarea><br>
+
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>  
+
+    <table border="1" cellpadding="10" style="width: 80%; margin: auto; border-collapse: collapse;">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Date & Time</th>
+            <th>Location</th>
+            <th>Expected Count</th>
+        </tr>
+
+        <?php 
+        // Correct PDO fetch method
+        while ($row = $events->fetch(PDO::FETCH_ASSOC)) : 
+        ?>
+            <tr>
+                <td><?= htmlspecialchars($row['event_id']); ?></td>
+                <td><?= htmlspecialchars($row['title']); ?></td>
+                <td><?= htmlspecialchars($row['description']); ?></td>
+                <td><?= htmlspecialchars($row['date_time']); ?></td>
+                <td><?= htmlspecialchars($row['location']); ?></td>
+                <td><?= htmlspecialchars($row['exp_cnt']); ?></td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
+    
+</body>
+</html>

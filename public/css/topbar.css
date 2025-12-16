@@ -5,14 +5,12 @@
     left: 240px; /* width of sidenav */
     right: 0;
     height: 60px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+    background-color: #EEF6FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
     z-index: 900;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Left side title */
@@ -44,7 +42,3 @@
     cursor: pointer;
 }
 
-/* Logo styling */
-.sidenav img {
-    height: 50px;
-}

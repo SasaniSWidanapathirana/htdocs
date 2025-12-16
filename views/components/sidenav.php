@@ -9,7 +9,7 @@
 <body>
     <div class="sidenav">
         <a href="../../index.php">
-            <img src="/htdocs/public/images/logo.png">   
+            <img src="/htdocs/public/images/logo2.png">   
         </a>
         <a href='../admin/admin_panel.php'>Current Events</a>
         <a href='../admin/past_event.php'>Past Events</a>

@@ -1,0 +1,50 @@
+/* Top Bar */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 240px; /* width of sidenav */
+    right: 0;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 900;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Left side title */
+.page-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1E3E62;
+    margin: 0;
+}
+
+/* Right side profile */
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1E3E62;
+    cursor: pointer;
+}
+
+/* Logo styling */
+.sidenav img {
+    height: 50px;
+}

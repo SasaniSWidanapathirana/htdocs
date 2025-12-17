@@ -79,7 +79,7 @@
 }
 
 /* Form container */
-#eventForm {
+#form-container {
     display: flex;
     flex-direction: column;
     gap: 8px; /* space between fields */
@@ -87,15 +87,15 @@
 }
 
 /* Labels */
-#eventForm label {
+#form-container label {
     font-weight: 500;
     color: #1E3E62;
     margin-bottom: 4px;
 }
 
 /* Inputs and textarea */
-#eventForm input,
-#eventForm textarea {
+#form-container input,
+#form-container textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -105,20 +105,32 @@
 }
 
 /* Focus effect for inputs */
-#eventForm input:focus,
-#eventForm textarea:focus {
+#form-container input:focus,
+#form-container textarea:focus {
     border-color: #1E3E62;
     box-shadow: 0 0 5px rgba(30, 62, 98, 0.3);
 }
 
 /* Textarea specific */
-#eventForm textarea {
+#form-container textarea {
     resize: vertical;  /* allow vertical resize only */
     min-height: 80px;
 }
+#form-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}  
+#form-container select:focus {
+    border-color: #1E3E62;
+    box-shadow: 0 0 5px rgba(30, 62, 98, 0.3);
+}
 
 /* Submit button */
-#eventForm button {
+#form-container button {
     padding: 10px;
     background-color: #ED7D2B;
     color: white;
@@ -131,15 +143,15 @@
 }
 
 /* Button hover */
-#eventForm button:hover {
+#form-container button:hover {
     background-color: #1E3E62; /* accent color on hover */
 }
 
 /* Optional: responsive adjustments for mobile */
 @media (max-width: 400px) {
-    #eventForm input,
-    #eventForm textarea,
-    #eventForm button {
+    #form-container input,
+    #form-container textarea,
+    #form-container button {
         font-size: 14px;
         padding: 8px;
     }
@@ -172,32 +184,43 @@
     flex-direction: column;
 }
 
-/* Main Content */
+/* Main content */
 .content {
-    margin: 95px 10px 20px 15px;
-    padding: 20px;
-    overflow-y: auto;
-    min-height: calc(100vh - 60px);
+    position: relative;              /* normal flow */
+     margin: 95px 10px 20px 15px;  /* or adjust top/bottom margins */                  /* optional top margin outside content */
+    padding: 20px 15px;              /* inner spacing */
     background-color: #ffffff;
     border-radius: 20px;
-
+    overflow: visible;               /* do not scroll content */
+    height: calc(100vh - 120px);     /* viewport height minus header/title + margin */
+    box-sizing: border-box;          /* include padding in height */
 }
 
+/* Create Event bar stays above table */
+.create-event-bar {
+    margin-bottom: 20px;             /* spacing below the button */
+}
+
+/* Table wrapper scrollable and spaced from content above */
 .event-table-wrapper {
-    overflow: hidden;
+    margin-top: 20px;                /* space from content above */
+    height: calc(100% - 40px);       /* fill remaining height */
+    overflow-y: auto;                /* scroll inside table only */
     border-radius: 16px;
-    margin-top: 20px;
-    background-color: #FFF8F4;;
+    background-color: #FFF8F4;
 }
 
+/* Table styling */
 .event-table {
     width: 100%;
-    border-collapse: separate; /* allow rounded corners */
+    border-collapse: separate;
     border-spacing: 0;
     background-color: #ffffff;
 }
 
 .event-table th {
+    position: sticky;       /* keep header visible */
+    top: 0;
     background-color: #FFF8F4;
     border-left: none;
     border-right: none;
@@ -205,8 +228,8 @@
     border-bottom: 1px solid #f0f0f0;
     padding: 20px;
     text-align: center;
+    z-index: 2;
 }
-
 
 .event-table td {
     border-left: none;
@@ -217,9 +240,7 @@
     padding: 20px;
 }
 
-
-
-/* Round the table corners by targeting first/last cells */
+/* Round table corners */
 .event-table tr:first-child th:first-child {
     border-top-left-radius: 16px;
 }
@@ -233,7 +254,7 @@
     border-bottom-right-radius: 16px;
 }
 
-/* Actions column styling */
+/* Action buttons */
 .action-cell {
     display: flex;
     gap: 8px;
@@ -242,27 +263,27 @@
 }
 
 .action-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #1E3E62;
-    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1E3E62;
+}
 
-    .action-btn .material-symbols-rounded {
-        font-size: 20px;
-    }
+.action-btn .material-symbols-rounded {
+    font-size: 20px;
+}
 
-    .action-btn.edit:hover {
-        background: rgba(30,62,98,0.06);
-    }
+.action-btn.edit:hover {
+    background: rgba(30,62,98,0.06);
+}
 
-    .action-btn.delete:hover {
-        background: rgba(229,57,53,0.08);
-    }
+.action-btn.delete:hover {
+    background: rgba(229,57,53,0.08);
+}
 
 /* Bar holding the Create Event button */
 .create-event-bar {

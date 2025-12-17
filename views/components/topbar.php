@@ -19,12 +19,24 @@
     </div>
 
     <div class="topbar-right">
-        <a href="../profile.php" class="profile-link">
-            <img src="/htdocs/public/images/user.svg" alt="Profile" class="profile-img">
-        </a>
+    <div class="profile-dropdown">
+      <button class="profile-btn">
+        <img src="/htdocs/public/images/user.svg" alt="Profile">
+        <span class="material-symbols-rounded">
+        stat_minus_1
+        </span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="../profile.php">My Profile</a>
+        <div class="divider"></div>
+        <a href="../logout.php" class="logout">Logout</a>
+      </div>
     </div>
+  </div>
 </div>
 
+<script src="/htdocs/public/js/topbar.js"></script>
 
 
 </body>

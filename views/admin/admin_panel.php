@@ -18,7 +18,7 @@ $events = $eventObj->getAllEvents();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./addEvent.js"></script>
+    <script src="/htdocs/public/js/addEvent.js"></script>
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="../../public/css/admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />

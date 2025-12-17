@@ -21,7 +21,7 @@ $events = $eventObj->getAllEvents();
     <script src="./addEvent.js"></script>
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="../../public/css/admin.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add_2" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
     <title>Admin Panel</title>
 </head>
@@ -43,7 +43,7 @@ $events = $eventObj->getAllEvents();
             <div class="div">
                 <div class="div create-event-bar">
                 <button id="openPanelBtn" class="create-btn">
-                    <span class="material-symbols-rounded">add_2</span>
+                    <span class="material-symbols-rounded">add</span>
                     Create Event
                 </button>
                 </div>

@@ -22,9 +22,6 @@
   transition: background 0.2s ease, color 0.2s ease, border-radius 0.2s ease, box-shadow 0.2s ease;
   border-radius: 0; /* start square so hover can curve the outside */
   margin-left: 10px;
-}
-
-.sidenav a {
   padding: 12px 18px;
   position: relative;
 }

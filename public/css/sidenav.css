@@ -54,7 +54,8 @@
 }
 
 .sidenav a.active {
-  background-color: #FFF8F4;
+  /* background-color: #FFF8F4; */
+  background-color: #f9f8f6;
   color: #eb9525;
   font-weight: 500;
   border-radius: 30px 0px 0px 30px;
@@ -70,7 +71,7 @@
   height: 20px;
   background: transparent;
   border-bottom-right-radius: 20px;
-  box-shadow: 5px 5px 0 #FFF8F4;
+  box-shadow: 5px 5px 0 #f9f8f6;
 }
 
 /* Bottom outer curve */
@@ -83,6 +84,6 @@
   height: 20px;
   background: transparent;
   border-top-right-radius: 20px;
-  box-shadow: 5px -5px 0 #FFF8F4;
+  box-shadow: 5px -5px 0 #f9f8f6;
 }
 

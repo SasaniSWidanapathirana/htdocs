@@ -5,7 +5,7 @@
 /* Main content offset */
 .admin-body {
     margin-left: 240px;   /* SAME as sidenav width */
-    background-color: #FFF8F4;
+    background-color: #f9f8f6;
 }
 
 /* Hidden by default (moved off-screen) */
@@ -232,6 +232,37 @@
 .event-table tr:last-child td:last-child {
     border-bottom-right-radius: 16px;
 }
+
+/* Actions column styling */
+.action-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #1E3E62;
+    }
+
+    .action-btn .material-symbols-rounded {
+        font-size: 20px;
+    }
+
+    .action-btn.edit:hover {
+        background: rgba(30,62,98,0.06);
+    }
+
+    .action-btn.delete:hover {
+        background: rgba(229,57,53,0.08);
+    }
 
 /* Bar holding the Create Event button */
 .create-event-bar {

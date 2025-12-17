@@ -2,22 +2,22 @@
 .topbar {
     position: fixed;
     top: 0;
-    left: 240px; /* width of sidenav */
+    left: 260px; /* width of sidenav */
     right: 0;
     height: 60px;
-    background-color: #EEF6FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
     z-index: 900;
+    margin: 15px 0px 15px 10px;
 }
 
 /* Left side title */
 .page-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1E3E62;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ED7D2B;
     margin: 0;
 }
 
@@ -38,7 +38,7 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #1E3E62;
+    border: 2px solid #ED7D2B;
     cursor: pointer;
 }
 

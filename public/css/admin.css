@@ -5,7 +5,7 @@
 /* Main content offset */
 .admin-body {
     margin-left: 240px;   /* SAME as sidenav width */
-    background-color: #EEF6FF;
+    background-color: #fff8ee;
 }
 
 /* Hidden by default (moved off-screen) */
@@ -43,10 +43,10 @@
     align-items: center;
     gap: 8px; /* space between icon and text */
     padding: 10px 16px;
-    background-color: #1E3E62;
+    background-color: #ED7D2B;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -56,7 +56,7 @@
 }
 
 .createFormTitle{
-    color: #1E3E62;
+    color: #ED7D2B;
     gap: 8px;
     display: flex;               /* use flex to allow centering */
     justify-content: center;     /* center horizontally */
@@ -67,7 +67,7 @@
 }
 
 .createFormTitle .icon{
-    fill: #1E3E62;
+    fill: #ED7D2B;
 }
 
 .createFormTitle .material-symbols-rounded {
@@ -120,7 +120,7 @@
 /* Submit button */
 #eventForm button {
     padding: 10px;
-    background-color: #1E3E62;
+    background-color: #ED7D2B;
     color: white;
     font-weight: 600;
     font-size: 16px;
@@ -154,7 +154,7 @@
 
 /* Side Navigation */
 .sidenav {
-    width: 240px;
+    width: 260px;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -166,15 +166,15 @@
 
 /* Main Wrapper (Topbar + Content) */
 .main-wrapper {
-    margin-left: 240px;   /* same as sidenav width */
-    width: calc(100% - 240px);
+    margin-left: 260px;   /* same as sidenav width */
+    width: calc(100% - 260px);
     display: flex;
     flex-direction: column;
 }
 
 /* Main Content */
 .content {
-    margin: 70px 10px 20px 10px;
+    margin: 95px 10px 20px 15px;
     padding: 20px;
     overflow-y: auto;
     min-height: calc(100vh - 60px);
@@ -208,21 +208,5 @@
     margin-bottom: 20px;
 }
 
-/* Create Event button */
-.create-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background-color: #1E3E62;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
 
-.create-btn:hover {
-    background-color: #16314e;
-}
 

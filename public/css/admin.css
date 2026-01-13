@@ -263,15 +263,16 @@
 }
 
 .action-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #1E3E62;
-}
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        outline: none;
+        text-decoration: none;
+        color: #1E3E62;
+    }
 
 .action-btn .material-symbols-rounded {
     font-size: 20px;
@@ -291,6 +292,5 @@
     justify-content: flex-end; /* move to right */
     margin-bottom: 20px;
 }
-
 
 

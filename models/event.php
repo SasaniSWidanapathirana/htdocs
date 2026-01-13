@@ -40,5 +40,46 @@ class Event {
 
         return $stmt->execute();
     }
+
+    // Fetch single event by ID
+    public function getEventById($id) {
+        $query = "SELECT * FROM " . $this->table . " WHERE event_id = :id LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Update event
+    public function updateEvent($id, $title, $description, $date_time, $location, $exp_cnt) {
+        $query = "UPDATE " . $this->table . "
+                SET title = :title,
+                    description = :description,
+                    date_time = :date_time,
+                    location = :location,
+                    exp_cnt = :exp_cnt
+                WHERE event_id = :id";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':title', $title);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':date_time', $date_time);
+        $stmt->bindParam(':location', $location);
+        $stmt->bindParam(':exp_cnt', $exp_cnt);
+
+        return $stmt->execute();
+    }
+
+    public function deleteEvent($id) {
+        $query = "DELETE FROM " . $this->table . " WHERE event_id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+
+
 }
 ?>

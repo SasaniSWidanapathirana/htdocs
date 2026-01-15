@@ -18,17 +18,17 @@ if (empty($userNIC) || empty($userEmail) || empty($userRole) || empty($field) ||
 
 // Convert role and field
 $userRole = ($userRole === "admin") ? 1 : 2;
-$field    = ($field === "field1") ? 1 : 2;
+//$field    = ($field === "field1") ? 1 : 2;
 
 // Hash password
 $hashedPassword = password_hash($userPassword, PASSWORD_DEFAULT);
 
 // Insert using method inside User class
 if ($userObj->insertUser($userNIC, $userEmail, $hashedPassword, $userRole, $field, 1)) {
-    header("Location: user_page.php?success=1"); // redirect to the page with table
+    header("Location: members.php?success=1"); // redirect to the page with table
     exit;
 } else {
-    header("Location: user_page.php?error=1");
+    header("Location: members.php?error=1");
     exit;
 }
 ?>

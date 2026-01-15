@@ -130,7 +130,8 @@
 }
 
 /* Submit button */
-#form-container button {
+#form-container button
+ {
     padding: 10px;
     background-color: #ED7D2B;
     color: white;

@@ -17,15 +17,15 @@
         </div>
 
         <div class="menu">
-        <a href='../admin/admin_panel.php' class="active">
+        <a href='../voulnteer/volunteer_panel.php' class="active">
             <span class="material-symbols-rounded">
             event
             </span>Current Events</a>
 
-        <a href='../admin/past_event.php'>
+        <a href='../voulnteer/view_atten.php'>
             <span class="material-symbols-rounded">
             event_available
-            </span>Past Events</a>
+            </span>View Attendance</a>
 
         <a href='../admin/members.php'>
             <span class="material-symbols-rounded">

@@ -83,7 +83,7 @@ $events = $eventObj->getAllEvents();
                     </form>
                 </div>
 
-                <!-- EDIT EVENT SLIDER -->
+                <!-- edit event slider -->
                 <div id="editSidePanel" class="side-panel">
                     <button id="closeEditPanelBtn" class="close-btn">
                         <span class="material-symbols-rounded">close</span>

@@ -40,16 +40,6 @@ class Event {
 
         return $stmt->execute();
     }
-
-    // Fetch single event by ID
-    public function getEventById($id) {
-        $query = "SELECT * FROM " . $this->table . " WHERE event_id = :id LIMIT 1";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
     // Update event
     public function updateEvent($id, $title, $description, $date_time, $location, $exp_cnt) {
         $query = "UPDATE " . $this->table . "

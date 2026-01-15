@@ -41,7 +41,7 @@
 .create-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* space between icon and text */
     padding: 10px 16px;
     background-color: #ED7D2B;
     color: white;
@@ -263,16 +263,15 @@
 }
 
 .action-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 8px;
-        outline: none;
-        text-decoration: none;
-        color: #1E3E62;
-    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1E3E62;
+}
 
 .action-btn .material-symbols-rounded {
     font-size: 20px;
@@ -292,5 +291,6 @@
     justify-content: flex-end; /* move to right */
     margin-bottom: 20px;
 }
+
 
 

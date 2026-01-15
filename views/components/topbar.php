@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>header</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/htdocs/public/css/topbar.css">
+    <link rel="stylesheet" href="/../../public/css/topbar.css">
 
 </head>
 <body>
@@ -24,7 +24,7 @@ if (!isset($pageTitle)) {
     <div class="topbar-right">
         <div class="profile-dropdown">
             <button class="profile-btn">
-                <img src="/htdocs/public/images/user.svg" alt="Profile">
+                <img src="/../../public/images/user.svg" alt="Profile">
                 <span class="material-symbols-rounded">
                     stat_minus_1
                 </span>
@@ -39,6 +39,6 @@ if (!isset($pageTitle)) {
     </div>
 </div>
 
-<script src="/htdocs/public/js/topbar.js"></script>
+<script src="/../../public/js/topbar.js"></script>
 </body>
 </html>

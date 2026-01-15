@@ -15,7 +15,7 @@
 
     <div class="bg-container">
         <?php include 'views/components/header.php'; ?>
-        <img src="/htdocs/public/images/bg.png" alt="Background Image" class="bg-image">
+        <img src="/public/images/bg.png" alt="Background Image" class="bg-image">
     </div>
 
     <!-- <h1 class = "h1_center">Landing Screen </h1>
@@ -34,7 +34,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img1.png" alt="Card 1">
+                        <img src="/public/images/img1.png" alt="Card 1">
                     </div>
                     <div class="flip-card-back">
                         <h2>Volunteer</h2>
@@ -46,7 +46,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img2.png" alt="Card 2">
+                        <img src="/public/images/img2.png" alt="Card 2">
                     </div>
                     <div class="flip-card-back">
                         <h2>Donate</h2>
@@ -58,7 +58,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img3.png" alt="Card 3">
+                        <img src="/public/images/img3.png" alt="Card 3">
                     </div>
                     <div class="flip-card-back">
                         <h2>Projects</h2>
@@ -70,7 +70,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img4.png" alt="Card 4">
+                        <img src="/public/images/img4.png" alt="Card 4">
                     </div>
                     <div class="flip-card-back">
                         <h2>Projects</h2>
@@ -86,7 +86,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img5.png" alt="Card 1">
+                        <img src="/public/images/img5.png" alt="Card 1">
                     </div>
                     <div class="flip-card-back">
                         <h2>Volunteer</h2>
@@ -98,7 +98,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img6.png" alt="Card 2">
+                        <img src="/public/images/img6.png" alt="Card 2">
                     </div>
                     <div class="flip-card-back">
                         <h2>Donate</h2>
@@ -110,7 +110,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img7.png" alt="Card 3">
+                        <img src="/public/images/img7.png" alt="Card 3">
                     </div>
                     <div class="flip-card-back">
                         <h2>Projects</h2>
@@ -122,7 +122,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="/htdocs/public/images/img8.png" alt="Card 4">
+                        <img src="/public/images/img8.png" alt="Card 4">
                     </div>
                     <div class="flip-card-back">
                         <h2>Projects</h2>
@@ -136,7 +136,7 @@
     </div>
 
     <div class="footer">
-        <h1>footer</h1>
+        <?php include 'views/components/footer.php'; ?>
     </div>
 
 </body>

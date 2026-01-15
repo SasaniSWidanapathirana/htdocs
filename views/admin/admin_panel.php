@@ -18,8 +18,8 @@ $events = $eventObj->getAllEvents();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/htdocs/public/js/addEvent.js"></script>
-    <script src="/htdocs/public/js/editEvent.js"></script>
+    <script src="/public/js/addEvent.js"></script>
+    <script src="/public/js/editEvent.js"></script>
     <link rel="stylesheet" href="../../public/css/admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
     <title>Admin Panel</title>
@@ -94,7 +94,7 @@ $events = $eventObj->getAllEvents();
                         Edit Event
                     </h3>
 
-                    <form id="eventForm" method="POST" action="edit_event.php">
+                    <form id="form-container" method="POST" action="edit_event.php">
                         <input type="hidden" name="event_id" id="edit_event_id">
 
                         <label>Name</label>

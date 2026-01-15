@@ -22,7 +22,7 @@ $users = $userObj->getAllUsers();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
      <!-- <link rel="stylesheet" href="../../public/css/style.css">  -->
    
-     <script src="/htdocs/public/js/addUser.js"></script>
+     <script src="/../public/js/addUser.js"></script>
     <title>Admin Screen</title>
 </head>
 

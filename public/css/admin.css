@@ -41,7 +41,7 @@
 .create-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* space between icon and text */
+    gap: 8px;
     padding: 10px 16px;
     background-color: #ED7D2B;
     color: white;

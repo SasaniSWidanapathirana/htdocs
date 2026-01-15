@@ -34,7 +34,10 @@ $events = $eventObj->getAllEvents();
     <div class="main-wrapper">
 
         <!-- Top Bar -->
-        <?php include '../components/topbar.php'; ?>
+
+        <?php
+            $pageTitle = "Current Events"; // or "Member" etc.
+            include '../components/topbar.php';?>
 
         <!-- Main Content -->
         <main class="content">
@@ -57,7 +60,7 @@ $events = $eventObj->getAllEvents();
                         Create Event
                     </h3>
 
-                    <form id="eventForm" method="POST" action="add_event.php">
+                    <form id="form-container" method="POST" action="add_event.php">
                         <label>Name</label>
                         <input type="text" name="eventName" required>
 
